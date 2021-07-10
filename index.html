@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap name_card</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .height4 {
+            height: 40%;
+        }
+
+        .height6 {
+            height: 60%;
+        }
+
+        .f1_5 {
+            font-size: 1.5rem;
+        }
+
+        .f2 {
+            font-size: 2rem;
+        }
+
+        .f3 {
+            font-size: 3.5rem;
+        }
+
+        #img {
+            background: url(./images/wda.png)no-repeat center center/contain;
+        }
+
+        @media (min-width: 768px) {
+            #black {
+                width: 30%;
+                height: 80%;
+                box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.46);
+                position: relative;
+            }
+
+            #black::before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 200px 0 0 200px;
+                border-color: transparent transparent transparent #ffffff;
+                position: absolute;
+                left: -30px;
+                bottom:-30px;
+            }
+
+            #white {
+                width: 50%;
+                height: 80%;
+                box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.46);
+            }
+
+            #white::before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 200px 200px 0;
+                border-color: transparent #ffffff transparent transparent;
+                position: absolute;
+                right: 8%;
+                top: 5%;
+            }
+
+            #up {
+                height: 50%;
+            }
+
+            #down {
+                height: 50%;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="vw-100 h-100 d-flex flex-column flex-md-row justify-content-md-center align-items-md-center modal-open">
+        <div id="black" class=" height4 bg-dark ">
+            <div id="img" class="h-100 text-center">
+            </div>
+        </div>
+        <div id="white" class="height6 bg-white">
+            <div id="up" class="container height6 d-flex flex-column justify-content-center p-5 mx-5">
+                <span class="f1_5">Front-End Designer</span>
+                <span class="f3">Kaifu Chang</span>
+                <span class="f2">泰 山 職 訓 局</span>
+            </div>
+            <div id="down" class="container height4 d-flex flex-column justify-content-center px-5 mx-5 justify-content-md-start">
+                <span class="">住址：24302新北市泰山區貴子里致遠新村55之1號</span>
+                <span class="">電話：02-2901-8274</span>
+                <span class="">E-Mail：Kaifu@example.cc</span>
+                <span class="">網站：http://www.kaifu.example.cc/</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</body>
+</html>
